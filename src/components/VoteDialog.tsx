@@ -72,10 +72,22 @@ const VoteDialog = ({ proposal, open, onClose, onSuccess }: VoteDialogProps) => 
       const contract = new Contract(TREASURY_DAO_ADDRESS, TREASURY_DAO_ABI, signer);
 
       const tx = await contract.vote(proposal.id, encryptedVote, proof);
-      await tx.wait();
+      const receipt = await tx.wait();
 
       toast.success('Vote submitted!', {
-        description: 'Your encrypted vote has been recorded',
+        description: (
+          <div className="flex flex-col gap-1">
+            <span>Your encrypted vote has been recorded</span>
+            <a
+              href={`https://sepolia.etherscan.io/tx/${receipt.hash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-blue-500 hover:text-blue-600 underline"
+            >
+              View transaction →
+            </a>
+          </div>
+        ),
       });
 
       setVoteChoice('');

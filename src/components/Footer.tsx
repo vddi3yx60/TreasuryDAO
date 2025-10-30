@@ -1,4 +1,4 @@
-import { Shield, Twitter, Github, MessageCircle } from 'lucide-react';
+import { Twitter, Github, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-warm flex items-center justify-center shadow-warm">
-                <Shield className="w-6 h-6 text-primary-foreground" />
+                <img src="/favicon.svg" alt="TreasuryDAO" className="w-6 h-6" />
               </div>
               <span className="text-2xl font-bold bg-gradient-warm bg-clip-text text-transparent">
                 TreasuryDAO

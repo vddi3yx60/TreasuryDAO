@@ -67,10 +67,22 @@ const CreateProposalDialog = ({ open, onClose, onSuccess }: CreateProposalDialog
         parseInt(votingDays)
       );
 
-      await tx.wait();
+      const receipt = await tx.wait();
 
       toast.success('Proposal created!', {
-        description: `Voting period: ${votingDays} days`,
+        description: (
+          <div className="flex flex-col gap-1">
+            <span>Voting period: {votingDays} days</span>
+            <a
+              href={`https://sepolia.etherscan.io/tx/${receipt.hash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-blue-500 hover:text-blue-600 underline"
+            >
+              View transaction →
+            </a>
+          </div>
+        ),
       });
 
       setTitle('');

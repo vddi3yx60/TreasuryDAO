@@ -55,10 +55,22 @@ const DepositDialog = ({ open, onClose, onSuccess }: DepositDialogProps) => {
         value: parseEther(amount),
       });
 
-      await tx.wait();
+      const receipt = await tx.wait();
 
       toast.success('Deposit successful!', {
-        description: `${amount} ETH deposited to treasury`,
+        description: (
+          <div className="flex flex-col gap-1">
+            <span>{amount} ETH deposited to treasury</span>
+            <a
+              href={`https://sepolia.etherscan.io/tx/${receipt.hash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-blue-500 hover:text-blue-600 underline"
+            >
+              View transaction →
+            </a>
+          </div>
+        ),
       });
 
       setAmount('');

@@ -1,5 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Shield } from 'lucide-react';
+// brand logo uses public/favicon.svg
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
           onClick={() => navigate('/')}
         >
           <div className="w-10 h-10 rounded-lg bg-gradient-warm flex items-center justify-center shadow-warm">
-            <Shield className="w-6 h-6 text-primary-foreground" />
+            <img src="/favicon.svg" alt="TreasuryDAO" className="w-6 h-6" />
           </div>
           <span className="text-2xl font-bold bg-gradient-warm bg-clip-text text-transparent">
             TreasuryDAO
