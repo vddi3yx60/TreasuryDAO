@@ -40,3 +40,7 @@ deployed-address.json
 # Lock files (optional, keep one)
 bun.lockb
 package-lock.json
+.vercel
+
+# Vercel
+.vercel
