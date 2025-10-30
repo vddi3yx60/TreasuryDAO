@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const CONTRACT_ADDRESS = "0x73FbaE0f1e2000F607E52Fd3087AeD88341847fB";
+  const CONTRACT_ADDRESS = "0x0719D5CA99339B9b78917EE7b644065B33a77850";
 
   console.log("🚀 Creating test proposals on SimpleTreasuryDAO...");
   console.log("Contract:", CONTRACT_ADDRESS);
@@ -27,7 +27,7 @@ async function main() {
     "Allocate 1 ETH to upgrade our infrastructure including new servers, improved security measures, and enhanced monitoring tools.",
     hre.ethers.parseEther("1"),
     recipient,
-    7 // 7 days voting period
+    60 // 60 days voting period
   );
   await tx1.wait();
   console.log("✅ Proposal 1 created");
@@ -39,7 +39,7 @@ async function main() {
     "Establish a community grant program with 0.5 ETH to fund innovative projects built by community members.",
     hre.ethers.parseEther("0.5"),
     recipient,
-    5 // 5 days voting period
+    60 // 60 days voting period
   );
   await tx2.wait();
   console.log("✅ Proposal 2 created");
@@ -51,7 +51,7 @@ async function main() {
     "Fund a comprehensive marketing campaign including social media ads, influencer partnerships, and content creation for 0.3 ETH.",
     hre.ethers.parseEther("0.3"),
     recipient,
-    3 // 3 days voting period
+    60 // 60 days voting period
   );
   await tx3.wait();
   console.log("✅ Proposal 3 created");
@@ -63,7 +63,7 @@ async function main() {
     "Hire a professional security firm to audit our smart contracts and provide recommendations. Budget: 2 ETH.",
     hre.ethers.parseEther("2"),
     recipient,
-    10 // 10 days voting period
+    60 // 60 days voting period
   );
   await tx4.wait();
   console.log("✅ Proposal 4 created");

@@ -75,7 +75,7 @@ contract SimpleTreasuryDAO is SepoliaConfig {
         if (deposits[msg.sender] < minDepositToVote) revert InsufficientDeposit();
         if (amount == 0) revert InvalidAmount();
         if (recipient == address(0)) revert InvalidRecipient();
-        if (votingPeriodDays == 0 || votingPeriodDays > 30) revert InvalidDeadline();
+        if (votingPeriodDays == 0 || votingPeriodDays > 90) revert InvalidDeadline();
 
         uint256 proposalId = proposals.length;
 

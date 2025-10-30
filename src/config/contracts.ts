@@ -1,4 +1,4 @@
-export const TREASURY_DAO_ADDRESS = "0x73FbaE0f1e2000F607E52Fd3087AeD88341847fB" as `0x${string}`;
+export const TREASURY_DAO_ADDRESS = "0x0719D5CA99339B9b78917EE7b644065B33a77850" as `0x${string}`;
 
 export const TREASURY_DAO_ABI = [
   {
