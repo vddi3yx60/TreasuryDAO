@@ -38,6 +38,46 @@ const Docs = () => {
           </p>
         </div>
 
+        {/* Demo Video Section */}
+        <section className="mb-16">
+          <Card className="p-8 shadow-warm">
+            <h2 className="text-3xl font-bold mb-6">Demo Video</h2>
+            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center relative overflow-hidden">
+              {/* Video placeholder */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
+              <div className="relative z-10 text-center">
+                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-10 h-10 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <p className="text-lg font-medium text-muted-foreground">
+                  Demo video coming soon
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Watch how to use TreasuryDAO in action
+                </p>
+              </div>
+              {/* Uncomment when video is ready */}
+              {/* <video
+                controls
+                className="w-full h-full object-cover"
+                poster="/path-to-thumbnail.jpg"
+              >
+                <source src="/path-to-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
+            </div>
+            <p className="text-sm text-muted-foreground mt-4 text-center">
+              This video will demonstrate the complete workflow: depositing ETH, creating proposals, and casting encrypted votes using FHE technology.
+            </p>
+          </Card>
+        </section>
+
         {/* What is TreasuryDAO */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6">What is TreasuryDAO?</h2>
